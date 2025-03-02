@@ -1,5 +1,5 @@
 valid_create_payload = {
-   "name": "Apple MacBook Pro 11111",
+   "name": "Apple MacBook Pro 19",
    "data": {
       "year": 2019,
       "price": 1849.99,
@@ -17,3 +17,14 @@ invalid_create_payload = {
       "Hard disk size": ""
    }
 }
+
+updated_payload = {
+   "name": "Apple MacBook Pro 20",
+   "data": {
+      "year": 2025,
+      "price": 2849.99,
+      "CPU model": 'Intel Core i9',
+      "Hard disk size": "2 TB"
+   }
+}
+

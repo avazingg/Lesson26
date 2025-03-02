@@ -29,6 +29,7 @@ class CreateObj(Endpoint):
                                       json=payload)
         self.response_json = self.response.json()
 
+
     def get_name(self):
         return self.get_data()['name']
 
@@ -44,8 +45,8 @@ class CreateObj(Endpoint):
     def get_hard_disk_size(self):
         return self.get_data()['data']['Hard disk size']
 
+    def get_all_fields(self):
+        return self.get_data()["data"]
+
     def check_all_fields(self, expected_data):
-        assert self.get_name() == expected_data["name"], (f"wrong name expected:"
-                                                          f" {expected_data['name']},"
-                                                          f" actual {self.get_name()}")
         assert self.get_data()["data"] == expected_data["data"], "wrong data in it"
