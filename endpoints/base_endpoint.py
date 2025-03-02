@@ -17,3 +17,6 @@ class Endpoint:
 
     def get_data(self):
         return self.response.json()
+
+    def check_all_fields(self, expected_data):
+        assert self.get_data()["data"] == expected_data["data"], "wrong data in it"
